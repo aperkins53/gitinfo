@@ -1,0 +1,34 @@
+Git Notes
+-git is a version control system used to track any file. Most notably used in development
+-git commits are checksumed using SHA-1 meaning no corrupt files without knowing about it.
+
+Three stages of git
+1-modified
+    -file changed, but it has not been committed (ex: normal work, or when saving)
+2-staging
+    -files that are marked to go into the next commit snapshot (utilizing git add script.js)
+3-commit stage
+    -data safely stored in the local databse (such as vm box, docker, computer, etc.)
+
+To start tracking
+1-git init
+    -creates new project
+    -your project should never be inside another project folder in order to avoid inverse tree tracking issues
+2-git add <file> or git add . (all)
+    -stages files for commit
+3-git commit -m "message"
+    -commits files so they are ready to push
+4-git push upstream <branch_name>
+    -pushes commit to github repository
+
+Other git commands
+    -git status - check on file staging
+    -git log - tracks commits to branches
+    -git branch <new_branch_name> - creates a new branch
+    -git checkout -b <new_branch_name> - creates a new branch and switches to it
+    -git checkout <branch_name> - switches to another branch
+    -git branch -D <branch_name> - deletes branch
+    -git reset <file_name> or git reset . (all) - removes an unstaged commit
+    -git revert --hard <commit hash BEFORE the one you want removed> - removes an entire commit
+    -git remote add upstream <repository link> - get link by creating a new repository on github and copy using clipboard button
+
